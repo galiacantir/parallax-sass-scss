@@ -1,0 +1,99 @@
+
+
+.parallax-container{
+    position: absolute;
+    top: 0;
+    left: -10px;
+    right: -30px;
+    bottom: -30px;
+    border: 1px solid red;
+    perspective: 100px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    
+    .layer{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    @for $n from 1 through 5 {
+
+    &.layer-#{$n} {
+    //border: 1px solid green;
+    
+    margin: 30% / $n 0;
+    z-index: -1 * $n;
+    transform: translateZ(-250px * $n) scale(2.5*$n + 1);
+}
+
+//     &.layer-2{
+//     border: 1px solid blueviolet;
+//     background-color: #89A8;
+//     z-index: -2;
+//     transform: translateZ(-400px) scale(5);
+// }
+
+//     &.layer-3{
+//     border: 1px solid yellowgreen;
+//     background-color: #9878;
+//     z-index: -3;
+//     transform: translateZ(-600px) scale(7);
+// }
+}
+}
+}
+
+.bg-mountains-front{
+    background-image: url(images/mountains_front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.bg-mountains-behind{
+    background-image: url(images/mountains_behind.png);
+    background-size: contain;
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    left: 22%;
+    top: 18%;
+}
+
+.moon{
+    background-image: url(images/moon.png);
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 10%;
+}
+
+
+.tree-1{
+    width: 100px;
+    height: 100px;
+    background-image: url(images/Fir-Tree-Transparent-Background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 64%;
+    bottom: 30px;
+}
+
+.tree-2{
+    width: 300px;
+    height: 300px;
+    background-image: url(images/Fir-Tree-Transparent-Background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 28%;
+    bottom: 60px;
+}
+

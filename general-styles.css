@@ -1,0 +1,212 @@
+@charset "UTF-8";
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/star.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.267);
+}
+nav .logo {
+  color: whitesmoke;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+nav .items {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 8px 20px;
+  font-size: 18px;
+  font-size: 1.3em;
+}
+nav .items:hover {
+  background: rgba(0, 0, 0, 0.71);
+  color: white;
+  border-radius: 6px;
+}
+
+.section {
+  width: auto;
+  padding: 5%;
+  box-sizing: border-box;
+  color: whitesmoke;
+}
+.section > * {
+  position: relative;
+  z-index: 999;
+}
+.section#presentation {
+  height: 60vh;
+  margin: 25vh;
+  text-align: center;
+}
+.section#presentation h1 {
+  font-size: 50px;
+}
+.section#presentation p {
+  margin-top: 10vh;
+  font-size: 20px;
+}
+.section#presentation button {
+  padding: 15px 35px;
+  background: #2f3542;
+  margin-top: 4vh;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.section#presentation button a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.section#presentation button:hover {
+  background-color: #e33058;
+}
+.section#offers {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+.section#offers h1 {
+  color: whitesmoke;
+  font-size: 50px;
+  padding: 50px 0;
+}
+.section#offers .price-row {
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 25px;
+}
+.section#offers .price-row .price-col {
+  background-color: #236;
+  padding: 5% 15%;
+  border-radius: 10px;
+  color: whitesmoke;
+  text-align: center;
+}
+.section#offers .price-row p {
+  font-size: 24px;
+}
+.section#offers .price-row h3 {
+  margin: 20px 0 20px;
+  font-size: 25px;
+}
+.section#offers .price-row span {
+  font-size: 18px;
+}
+.section#offers .price-row ul {
+  text-align: left;
+  margin: 10px 0;
+  color: #ddd;
+  list-style: none;
+}
+.section#offers .price-row li {
+  margin: 10px 0;
+}
+.section#offers .price-row li::before {
+  content: "•";
+  color: #e33058;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.section#offers .price-row button {
+  width: 100%;
+  padding: 14px 0;
+  background: transparent;
+  color: whitesmoke;
+  font-size: 15px;
+  border: 1px solid #e33058;
+  border-radius: 6px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.section#offers .price-row button:hover {
+  background: #e33058;
+}
+.section.section-newsletter {
+  height: 50vh;
+  text-align: center;
+  box-sizing: border-box;
+}
+.section.section-newsletter h1 {
+  margin-top: 120px;
+  color: whitesmoke;
+  font-size: 36px;
+  padding: 20px 0;
+}
+.section.section-newsletter p {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 20px;
+}
+.section.section-newsletter .email-box {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+.section.section-newsletter .email-box i {
+  width: 40px;
+  line-height: 40px;
+  background: #2f3542;
+}
+.section.section-newsletter .email-box input {
+  border: none;
+  outline: none;
+  width: 260px;
+  padding: 0 10px;
+}
+.section.section-newsletter .email-box button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  margin: 0 5px;
+  padding: 0 10px;
+  background: #2f3542;
+  color: whitesmoke;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.section.section-newsletter .email-box button:hover {
+  background: #e33058;
+}/*# sourceMappingURL=general-styles.css.map */

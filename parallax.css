@@ -1,0 +1,92 @@
+.parallax-container {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  right: -30px;
+  bottom: -30px;
+  border: 1px solid red;
+  perspective: 100px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.parallax-container .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.parallax-container .layer.layer-1 {
+  margin: 30% 0;
+  z-index: -1;
+  transform: translateZ(-250px) scale(3.5);
+}
+.parallax-container .layer.layer-2 {
+  margin: 15% 0;
+  z-index: -2;
+  transform: translateZ(-500px) scale(6);
+}
+.parallax-container .layer.layer-3 {
+  margin: 10% 0;
+  z-index: -3;
+  transform: translateZ(-750px) scale(8.5);
+}
+.parallax-container .layer.layer-4 {
+  margin: 7.5% 0;
+  z-index: -4;
+  transform: translateZ(-1000px) scale(11);
+}
+.parallax-container .layer.layer-5 {
+  margin: 6% 0;
+  z-index: -5;
+  transform: translateZ(-1250px) scale(13.5);
+}
+
+.bg-mountains-front {
+  background-image: url(images/mountains_front.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-mountains-behind {
+  background-image: url(images/mountains_behind.png);
+  background-size: contain;
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  left: 22%;
+  top: 18%;
+}
+
+.moon {
+  background-image: url(images/moon.png);
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 50%;
+  top: 10%;
+}
+
+.tree-1 {
+  width: 100px;
+  height: 100px;
+  background-image: url(images/Fir-Tree-Transparent-Background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 64%;
+  bottom: 30px;
+}
+
+.tree-2 {
+  width: 300px;
+  height: 300px;
+  background-image: url(images/Fir-Tree-Transparent-Background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 28%;
+  bottom: 60px;
+}/*# sourceMappingURL=parallax.css.map */
