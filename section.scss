@@ -1,3 +1,23 @@
+$bgHover: #e33058;
+$detailsColor: #236;
+$borderColor: #e33058;
+
+@mixin buttonStyle {
+    background: #236;
+    color: whitesmoke;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+@mixin linkStyle{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
 .section{
     width: auto;
     padding: 5%;
@@ -26,30 +46,23 @@
         }
 
         button{
-            padding: 15px 35px;
-            background: #2f3542;
-            margin-top: 4vh;
-            border: none;
-            border-radius: 6px;
+            @include buttonStyle();
+            padding: 15px 60px;
+            margin-top: 6vh;
             text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.5s;
-            
-            a{
-                text-decoration: none;
-                color: whitesmoke;
 
+            a{
+                @include linkStyle();
             }
 
             &:hover{
-                background-color:#e33058;
+                background-color: $bgHover;
             }
  
         }
     }
 
-
-    //PRICE/OFFERS SECTION
+    //PRICE-OFFERS SECTION
 
     &#offers{
         width: 100%;
@@ -72,7 +85,7 @@
             grid-gap: 25px;
         
             .price-col{
-            background-color: #236;
+            background-color: $detailsColor;
             padding: 5% 15%;
             border-radius: 10px;
             color: whitesmoke;
@@ -114,28 +127,26 @@
             button{
             width: 100%;
             padding: 14px 0;
-            background: transparent;
-            color: whitesmoke;
-            font-size: 15px;
-            border: 1px solid #e33058;
-            border-radius: 6px;
             margin-top: 30px;
-            cursor: pointer;
-            transition: background 0.5s;
-        
+            @include buttonStyle();
+            border: 1px solid $borderColor;
+
             &:hover{
-            background: #e33058;
+            background-color: $bgHover;
+            }
+
+            a{
+            @include linkStyle();
             }
             }
         }
     }
 
-
     //Reviews 
 
     &#reviews{
         width: 100%;
-        min-height: 70vh;
+        min-height: 80vh;
         
         display: flex;
         justify-content: center;
@@ -145,22 +156,24 @@
             width: 98%;
            
             h1{
+                color: whitesmoke;
+                font-size: 50px;
+                padding: 20px 0;
                 text-align: center;
-                font-size: 45px;
             }
 
             p{
                 text-align: center;
                 font-size: 18px;
-                padding: 10px 0;
+                
             }
 
         }
 
         .review-carousel{
-            margin: 40px 0;
+            margin: 20px 0;
             display: flex;
-            justify-content:space-around;
+            justify-content:center;
             align-items: center;
 
             .review-box{
@@ -168,29 +181,38 @@
                 text-align: center;
                 margin: 10px;
                 padding: 10px;
-                background-color: #236;
+                background-color: $detailsColor;
                 border-radius: 6px;
-                border: 1px solid #e33058;
+                //border: 1px solid #e33058;
 
-                .avatar{
-                    img{
+                img{
                     width: 100px;
                     border-radius: 100%;
-                    left: 30px;
+                    display: block;
+                    margin: 10px auto;
                     
                 }
-                }
 
-                
-
-                
-
-
-                }
-                }
-                
-            }
+                button{
+                    width: 60%;
+                    padding: 10px 0;
+                    margin: 10px;
+                    @include buttonStyle();
+                    border: 1px solid $borderColor;
         
+                    &:hover{
+                    background-color: $bgHover;
+                    }
+
+                    a{
+                        @include linkStyle();
+                    }
+                }
+            }
+
+        }
+    }
+                
     //Newsletter
 
     &.section-newsletter{
@@ -246,7 +268,7 @@
                 cursor: pointer;
                 transition: background 0.5s;
                 &:hover{
-                    background: #e33058;
+                    background-color: $bgHover;
                     }
 
             }
